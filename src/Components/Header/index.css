@@ -1,0 +1,78 @@
+.navContainer{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #2DC123;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #2DC123;
+}
+.icon{
+    font-size: 20px;
+    color: #2DC123;
+}
+.sp1{
+    color: #000000;
+}
+.headlogo{
+    color: #2DC123;
+    cursor: pointer;
+}
+.btn-logout{
+    border: none;
+    background-color: #2DC123;
+    color: #ffffff;
+    padding: 7px;
+    width: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 12px;
+}
+.btn-logout:hover{
+    scale: 1.1;
+    transition: 0.4s;
+}
+.navItems{
+    list-style-type: none;
+    color: #000000;
+    padding-right: 10px;
+    font-weight: 500;
+}
+.form-box{
+    width: 40%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+    border-radius: 8px;
+}
+.ic{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 3px;
+    color: #000000;
+    background-color: #F0F0F0;
+}
+.search-box{
+    width:100%;
+    border: none;
+    outline:none;
+    order: 1;
+    background-color: #F0F0F0;
+    color: #000000;
+}
+
+.btn-search{
+    border: none;
+    order: 0;
+    background-color: #F0F0F0;
+}
