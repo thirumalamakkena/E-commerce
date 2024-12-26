@@ -3,17 +3,18 @@ POST http://localhost:7000/api/auth/register
 Content-Type: application/json
 
 {
-    "email": "thirumala1@example.com",
-    "password": "thirumala123",
-    "firstName": "thirumala",
-    "lastName": "makkena",
-    "username": "thirumalam",
-    "phoneNumber":"+919392495652"
+    "email": "lisa.hall@example.com",
+    "password": "lisapass456",
+    "firstName": "Lisa",
+    "lastName": "Hall",
+    "username": "lisahall",
+    "phoneNumber":"+911234567890"
 }
 
 
 
 ###
+send request
 POST http://localhost:7000/api/auth/login 
 Content-Type: application/json
 
@@ -24,32 +25,32 @@ Content-Type: application/json
 
 
 ### 
+for( let i = 0; i < 10; i++) {
+    POST http://localhost:7000/api/product/add-product 
+    Content-Type: application/json
+    
+    { 
 
-POST http://localhost:7000/api/product/add-product 
-Content-Type: application/json
+        "title": "Organic Apples",
+        "description": "Fresh organic apples from local farms.",
+        "price": 3.5,
+        "quantity": 100,
+        "category": "Fruits & Vegetables",
+        "image": "apple-image.jpg"
+    }  
 
-{ 
-
-    "title": "Organic Apples",
-    "description": "Fresh organic apples from local farms.",
-    "price": 3.5,
-    "quantity": 100,
-    "category": "Fruits & Vegetables",
-    "image": "apple-image.jpg"
-}  
-
-###
+}
 
 POST http://localhost:7000/api/product/add-product 
 Content-Type: application/json
  
 {
-  "title": "Banana",
-  "description": "Fresh organic bananas from local farms.",
-  "price": 40,
-  "quantity": 200,
+  "title": "Organic Apples",
+  "description": "Fresh organic apples from local farms.",
+  "price": 3.5,
+  "quantity": 100,
   "category": "Fruits & Vegetables",
-  "image": "banana-image.jpg"
+  "image": "apple-image.jpg"
 }
 
 ###
@@ -57,30 +58,8 @@ POST http://localhost:7000/api/cart/add-to-cart
 Content-Type: application/json
 
 {
+  "title" : "Organic Apples",
   "userId": "676c3dcc60c6718ea05aa7b6",
-  "productId": "676d27d9ea7b55097f8fff14",
-  "quantity": 10
+  "productId": "676c4d2d06dca45d184b7d62",
+  "quantity": 5
 }
-
-###
-GET http://localhost:7000/api/product/products 
-
-###
-GET http://localhost:7000/api/product/product/676c55179a4d5b1f1d9b74c6 
-
-###
-PUT http://localhost:7000/api/product/update-product/676d27d9ea7b55097f8fff14 
-Content-Type: application/json
-
-{
-  "title": "Banana",
-  "description": "Fresh organic bananas from local farms.",
-  "price": 40,
-  "quantity": 150,
-  "category": "Fruits & Vegetables",
-  "image": "banana-image.jpg"
-}
-
-###
-
-GET http://localhost:7000/api/cart/get-cart-items/676c3dcc60c6718ea05aa7b6
