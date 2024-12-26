@@ -1,17 +1,35 @@
-import './App.css';
+import { Component } from "react"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import context from "./context/context"
+import Home from "./Components/Home"
+import LoginForm from "./Components/LoginForm"
+import ProtectedRoute from "./Components/ProtectedRoute"
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+class App extends Component{
+  state={
+    cartList:[]
+  }
+  
+  render(){
+    const {cartList} = this.state
+    return(
+      <context.Provider
+      value={{cartList}}
+      >
+        <Router>
+        <Routes>
+        <Route exact path="/login" element={<LoginForm/>} />
+        <Route element={<ProtectedRoute/>}>
+          <Route path="/" element={<Home/>}/>
+        </Route>
+        </Routes>
+        </Router>
+      </context.Provider>
+    )
+  }
 
-        <p>
-          Edit and save to reload.
-        </p>
-        
-      </header>
-    </div>
-  );
+
 }
 
-export default App;
+export default App
