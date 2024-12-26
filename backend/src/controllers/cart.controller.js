@@ -47,21 +47,3 @@ export const addCartItem = async (req, res) => {
     }
   }
 
-export const getCartItems = async (req, res) => {
-    const { userId } = req.params;
-    try {
-      // Fetch the cart by userId
-      const cart = await Cart.findOne({ userId });
-      // Check if the cart exists
-      if (!cart) {
-        return res.status(404).json({ error: 'Cart not found' });
-      }
-
-      // Respond with the cart items
-      res.status(200).json({ items: cart.items });
-    }
-    catch (error) {
-      console.error('Error fetching cart items:', error);
-      res.status(500).json({ error: 'Server error' });
-    }
-  }
