@@ -1,0 +1,64 @@
+
+POST http://localhost:7000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "lisa.hall@example.com",
+    "password": "lisapass456",
+    "firstName": "Lisa",
+    "lastName": "Hall",
+    "username": "lisahall",
+    "phoneNumber":"+911234567890"
+}
+
+
+
+###
+POST http://localhost:7000/api/auth/login 
+Content-Type: application/json
+
+{
+    "username": "lisahall",
+    "password": "lisapass456"  
+}
+
+
+### 
+for( let i = 0; i < 10; i++) {
+    POST http://localhost:7000/api/product/add-product 
+    Content-Type: application/json
+    
+    { 
+
+        "title": "Organic Apples",
+        "description": "Fresh organic apples from local farms.",
+        "price": 3.5,
+        "quantity": 100,
+        "category": "Fruits & Vegetables",
+        "image": "apple-image.jpg"
+    }  
+
+}
+
+POST http://localhost:7000/api/product/add-product 
+Content-Type: application/json
+ 
+{
+  "title": "Organic Apples",
+  "description": "Fresh organic apples from local farms.",
+  "price": 3.5,
+  "quantity": 100,
+  "category": "Fruits & Vegetables",
+  "image": "apple-image.jpg"
+}
+
+###
+POST http://localhost:7000/api/cart/add-to-cart
+Content-Type: application/json
+
+{
+  "title" : "Organic Apples",
+  "userId": "676c3dcc60c6718ea05aa7b6",
+  "productId": "676c4d2d06dca45d184b7d62",
+  "quantity": 5
+}
