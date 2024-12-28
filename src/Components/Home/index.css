@@ -1,3 +1,126 @@
-h1{
+.home-container{
+    height: 100vh;
+    box-sizing: border-box;
+}
+.main-container{
+    padding: 20px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(25,90,104);
+    background: linear-gradient(90deg, rgba(25,90,104,1) 0%, rgba(26,177,212,1) 50%, rgba(30,106,124,1) 100%);
+}
+.main-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 30px;
+}
+.home-text{
+    width: 60%;
+    font-family: "roboto";
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: transparent;
+    order: 1;
+}
+.txt{
+    color: white;
+    background-color: transparent;
+    font-size: 35px;
+    line-height: 1.3;
+}
+.home-img{
+    height: 430px;
+    background-color: transparent;
+    order: 2;
+}
+.para-home{
+    font-size: 17px;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.5;
+}
+.btn-shop{
+    border: none !important;
+    background-color: #2DC123;
+    cursor: pointer;
+    font-size: 17px;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px !important;
+    width: 150px;
+}
+.feature-section{
+    padding: 40px;
+    padding-top: 30px;
+}
+.head-text{
+    color: black; 
+    font-size: 29px;
+    font-family: "roboto";
+}
+.img-f{
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    position: center;
+    transition: 0.5s;
+}
+
+.box-f{
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d8cece;
+    justify-content: center !important;
+    text-align: center;
+    align-items: center !important;
+    flex-direction: column;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 20px;
+    width: 200px !important;
+    margin-top: 30px;
+    transition: 0.3s;
+    font-family: "roboto";
+}
+.box-f:hover{
+    border-color: #2DC123;
+    transition: 0.3s;
+}
+.title{
     color: #000000;
+    padding-top: 10px;
+}
+.img-f:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .home-text{
+        order: 2;
+        width: 90%;
+    }
+    .home-img{
+        order: 1;
+        height: 350px;
+    }
+    .main-box{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
 }

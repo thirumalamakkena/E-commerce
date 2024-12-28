@@ -1,11 +1,16 @@
 .navContainer{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 16px;
+    padding-right: 40px;
+    padding-left: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #2DC123;
+    font-family: "roboto";
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
 }
 .logo{
     display: flex;
@@ -39,12 +44,20 @@
 .btn-logout:hover{
     scale: 1.1;
     transition: 0.4s;
+    color: #000000;
 }
 .navItems{
     list-style-type: none;
     color: #000000;
-    padding-right: 10px;
+    padding-right: 20px;
     font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navItems:hover{
+    transition: 0.5s;
+    color: #2DC123;
+
 }
 .form-box{
     width: 40%;
@@ -54,12 +67,13 @@
     align-items: center;
     background-color: #F0F0F0;
     border-radius: 8px;
+    padding: 5px;
 }
-.ic{
+.icc{
     font-size: 18px;
     font-weight: 500;
     margin-top: 3px;
-    color: #000000;
+    color: #000000 !important;
     background-color: #F0F0F0;
 }
 .search-box{
@@ -69,10 +83,74 @@
     order: 1;
     background-color: #F0F0F0;
     color: #000000;
+    margin-right: 5px;
 }
 
 .btn-search{
     border: none;
     order: 0;
+    color: #000000 ;
+    background-color:transparent;
+    cursor: pointer;
+    padding-right: 5px;
+}
+.close-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    font-family: "roboto";
+    padding: 20px;
+    border-radius: 10px;
+}
+.popup{
+    border-radius: 10px;
+}
+.flex1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+.pop-logOut{
+    border-radius: 10px;
+    background-color: #2DC123;
+}
+.logHead{
+    font-size: 20px;
+    color: #000000;
+    padding-top: 16px;
+}
+
+.btn{
+    padding: 9px;
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.btn-yes{
+    background-color:#2DC123;
+    color: #ffffff;
+    border: none;
+}
+.btn-no{
     background-color: #F0F0F0;
+    color: #000000;
+    border: none;
+}
+
+@media screen and (max-width:768px){
+    .logHead{
+        font-size: 16px;
+        text-align: center;
+    }
+    .btn{
+        padding: 5px;
+        width: 70px;
+        font-size: 13px;
+    }
 }
